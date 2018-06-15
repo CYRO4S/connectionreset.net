@@ -1,0 +1,13 @@
+[Unit]                                                                 
+Description=ConnectionReset.net Service                                
+After=network.target                                                   
+Wants=network.target                                                   
+                                                                       
+[Service]                                                              
+Type=simple                                                            
+PIDFile=/var/run/connrst.pid                                           
+ExecStart=/usr/local/share/connrst.php                                                
+Restart=on-failure                                                     
+                                                                       
+[Install]                                                              
+WantedBy=multi-user.target
